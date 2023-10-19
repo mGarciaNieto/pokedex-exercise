@@ -51,6 +51,12 @@
 .pokemon-img img {
 	width: 100px;
 	height: 200px;
+	transition: all ease 500ms;
+}
+
+.pokemon-img img:hover {
+	transform: scale(1.2);
+	opacity: 0.7;
 }
 
 .pokemon-type,
