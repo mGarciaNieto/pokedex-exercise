@@ -112,6 +112,7 @@
 	color: rgb(236, 226, 226);
 }
 
+
 @media (min-width: 768px) {
 	.pokedex-container {
 		grid-template-columns: repeat(2, 1fr);

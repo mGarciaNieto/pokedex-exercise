@@ -2,6 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react'
 import './Pokedex.css'
 import axios from 'axios'
 import myImage from '../../assets/pokedex_logo.png'
+import { Ring } from '@uiball/loaders'
 
 const POKEMON_API = 'https://pokeapi.co/api/v2/pokemon?limit=8&offset=0'
 
