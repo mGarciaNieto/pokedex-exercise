@@ -60,20 +60,27 @@
 }
 
 .pokemon-type,
-.pokemon-weight {
+.pokemon-weight,
+.pokemon-height {
 	color: #170505;
 	font-size: 1.8rem;
 	font-weight: bold;
 	text-transform: capitalize;
-	margin-top: 12%;
+	margin-top: 6%;
 	padding: 0 5% 0 5%;
 	font-family: 'Gruppo', sans-serif;
 	text-align: left;
 }
 
-.pokemon-weight {
+.pokemon-weight,
+.pokemon-height {
 	margin-top: 0;
 	padding-top: 1%;
+}
+
+.pokemon-weight span,
+.pokemon-height span {
+	text-transform: lowercase;
 }
 
 .pagination {

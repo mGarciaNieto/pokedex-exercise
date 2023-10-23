@@ -39,7 +39,14 @@ function Pokedex() {
 							<div className='pokemon-type'>Type: {pokemon.types[0].type.name}</div>
 						</div>
 						<div>
-							<div className='pokemon-weight'>Weight: {pokemon.weight}</div>
+							<div className='pokemon-height'>
+								Height: {pokemon.height} <span>m</span>
+							</div>
+						</div>
+						<div>
+							<div className='pokemon-weight'>
+								Weight: {pokemon.weight} <span>kg</span>
+							</div>
 						</div>
 					</div>
 				))}
