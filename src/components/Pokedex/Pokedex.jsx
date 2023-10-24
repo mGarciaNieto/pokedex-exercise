@@ -39,8 +39,8 @@ function Pokedex() {
 				<div className='pokedex-header__tittle'>
 					<img src={myImage} alt='Pokedex' />
 				</div>
-				<div className='pokedex-header__search'>
-					<input type='text' className='pokedex-header__search-input' placeholder='Search Pokémon...' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+				<div className='pokedex-header__link'>
+					<h1>Search Pokémon by name</h1>
 				</div>
 			</div>
 			<div className='pokedex-container'>

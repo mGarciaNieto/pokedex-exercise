@@ -20,18 +20,12 @@
 	width: 200px;
 }
 
-.pokedex-header__search {
+.pokedex-header__link {
+	width: 100%;
 	margin: 5% 1%;
-	text-align: center;
-}
-
-.pokedex-header__search-input {
-	padding: 10px;
-	font-size: 16px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	/* width: 100%; */
-	text-align: center;
+	text-align: right;
+	font-family: Gruppo, sans-serif;
+	font-size: 1.5rem;
 }
 
 .pokedex-container {
