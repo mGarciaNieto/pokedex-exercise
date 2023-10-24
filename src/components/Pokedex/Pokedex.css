@@ -6,28 +6,6 @@
 	justify-content: center;
 }
 
-.pokedex-header {
-	width: 90%;
-}
-
-.pokedex-header__tittle {
-	width: 100%;
-	text-align: center;
-	margin: 2% 0;
-}
-
-.pokedex-header__tittle img {
-	width: 200px;
-}
-
-.pokedex-header__link {
-	width: 100%;
-	margin: 5% 1%;
-	text-align: right;
-	font-family: Gruppo, sans-serif;
-	font-size: 1.5rem;
-}
-
 .pokedex-container {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);

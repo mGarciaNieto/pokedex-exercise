@@ -3,13 +3,14 @@ import './Pokedex.css'
 import axios from 'axios'
 import myImage from '../../assets/pokedex_logo.png'
 import Loader from '../Loader/Loader'
+import { Link } from 'react-router-dom'
+import PokedexHeader from '../PokedexHeader/PokedexHeader'
 
 const POKEMON_API = 'https://pokeapi.co/api/v2/pokemon?limit=6&offset=0'
 
 function Pokedex() {
 	const [pokemons, setPokemons] = useState([])
 	const [currentPage, setCurrentPage] = useState(0)
-	const [searchTerm, setSearchTerm] = useState('')
 	const [loading, setLoading] = useState(true)
 
 	useEffect(() => {
@@ -31,18 +32,9 @@ function Pokedex() {
 			})
 	}, [currentPage])
 
-	const filteredPokemons = pokemons.filter((pokemon) => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()))
-
 	return (
 		<div className='pokedex'>
-			<div className='pokedex-header'>
-				<div className='pokedex-header__tittle'>
-					<img src={myImage} alt='Pokedex' />
-				</div>
-				<div className='pokedex-header__link'>
-					<h1>Search Pokémon by name</h1>
-				</div>
-			</div>
+			<PokedexHeader />
 			<div className='pokedex-container'>
 				{pokemons.map((pokemon) => (
 					<div key={pokemon.name} className='pokemon-card'>
