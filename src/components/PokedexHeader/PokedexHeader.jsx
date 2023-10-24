@@ -14,7 +14,7 @@ const PokedexHeader = () => {
 				</div>
 				<div className='pokedex-header__link'>
 					<Link to='/pokemondetail'>
-						<h1>Search Pokémon by name</h1>
+						<h1 className='pokedex-header__link-h1'>Search Pokémon by name</h1>
 					</Link>
 				</div>
 			</div>
