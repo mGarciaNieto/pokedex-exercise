@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 import './PokemonDetail.css'
 import { Link } from 'react-router-dom'
+import { ReactComponent as ArrowLeft } from '../../assets/arrow-left-svgrepo-com.svg'
+import { ReactComponent as Search } from '../../assets/search-alt-2-svgrepo-com.svg'
 
 const PokemonDetail = () => {
 	const [allPokemons, setAllPokemons] = useState([])
@@ -38,6 +40,7 @@ const PokemonDetail = () => {
 
 			<div className='pokemon-main'>
 				<div className='pokemon__search'>
+          <Search className='pokemon__search-svg' />
 					<input className='pokemon__search-input' type='text' ref={searchTermRef} placeholder='Enter Pokémon name...' />
 					<button className='pokemon__search-button' onClick={handleSearch}>
 						Search
@@ -79,6 +82,7 @@ const PokemonDetail = () => {
             ))}
           </ul> */}
 					<Link to='/'>
+						<ArrowLeft className='pokemon-main__button-svg' />
 						<h2>Back to main</h2>
 					</Link>
 				</div>
