@@ -1,9 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import './Pokedex.css'
 import axios from 'axios'
-import myImage from '../../assets/pokedex_logo.png'
 import Loader from '../Loader/Loader'
-import { Link } from 'react-router-dom'
 import PokedexHeader from '../PokedexHeader/PokedexHeader'
 
 const POKEMON_API = 'https://pokeapi.co/api/v2/pokemon?limit=6&offset=0'
