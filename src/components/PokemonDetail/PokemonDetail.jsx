@@ -12,7 +12,7 @@ const PokemonDetail = () => {
 
 	useEffect(() => {
 		axios
-			.get('https://pokeapi.co/api/v2/pokemon?limit=100000')
+			.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
 			.then((response) => {
 				setAllPokemons(response.data.results)
 			})
@@ -40,7 +40,7 @@ const PokemonDetail = () => {
 
 			<div className='pokemon-main'>
 				<div className='pokemon__search'>
-          <Search className='pokemon__search-svg' />
+					<Search className='pokemon__search-svg' />
 					<input className='pokemon__search-input' type='text' ref={searchTermRef} placeholder='Enter Pokémon name...' />
 					<button className='pokemon__search-button' onClick={handleSearch}>
 						Search
@@ -50,7 +50,7 @@ const PokemonDetail = () => {
 					<div className='pokemon-details'>
 						<h2 className='pokemon-details__name'>{selectedPokemon.name}</h2>
 
-						<img className='pokemon-details__image' src={selectedPokemon.sprites.front_default} alt={selectedPokemon.name} />
+						<img className='pokemon-details__image' src={selectedPokemon.sprites.other.dream_world.front_default} alt={selectedPokemon.name} />
 
 						<div className='pokemon-details__types'>
 							<h2>Types</h2>
@@ -70,7 +70,9 @@ const PokemonDetail = () => {
 									</li>
 								))}
 							</ul>
-							<div className='pokemon-details__stats-total'>Total: {selectedPokemon.stats.reduce((total, statInfo) => total + statInfo.base_stat, 0)}</div>
+							<div className='pokemon-details__stats-total'>
+								<strong>Total:</strong> {selectedPokemon.stats.reduce((total, statInfo) => total + statInfo.base_stat, 0)}
+							</div>
 						</div>
 					</div>
 				)}

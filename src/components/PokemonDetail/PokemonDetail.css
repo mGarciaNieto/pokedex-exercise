@@ -4,7 +4,6 @@
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
-	margin: 10% 0;
 	width: 1000px;
 }
 
@@ -18,6 +17,10 @@
 
 .pokemon-main {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .pokemon__search {
@@ -26,10 +29,16 @@
 	align-items: center;
 }
 
+.pokemon__search-svg {
+	width: 50px;
+	height: 50px;
+	margin-right: 1%;
+}
+
 .pokemon__search-input {
 	padding: 15px 35px;
 	font-size: 16px;
-	border: 1px solid #ccc;
+	border: 1px solid #000000;
 	border-radius: 5px;
 	width: 100%;
 	max-width: 300px;
@@ -52,6 +61,51 @@
 	background-color: #212121;
 }
 
+.pokemon-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+	width: 500px;
+	height: 670px;
+	border: 1px solid #f4f1f1;
+	border-radius: 10px;
+	text-align: center;
+	background-color: rgb(242, 222, 222);
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.pokemon-details__name {
+	font-size: 4rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #3d423d;
+	font-family: 'Kaushan Script', cursive;
+	text-transform: capitalize;
+}
+
+.pokemon-details__image {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 2%;
+}
+
+.pokemon-details__types,
+.pokemon-details__stats {
+	margin-bottom: 2%;
+	font-size: 2rem;
+}
+
+.pokemon-details__types ul,
+.pokemon-details__stats ul {
+	list-style-type: none;
+}
+
+.pokemon-details__stats-total {
+	margin-top: 9%;
+	font-size: 2rem;
+}
+
 .pokemon__result {
 	margin-top: 20px;
 	text-align: center;
@@ -60,10 +114,16 @@
 .pokemon-main__button {
 	width: 30%;
 	text-align: center;
-  margin-top: 10%;
+	margin-top: 5%;
 }
 
 .pokemon-main__button a {
 	text-decoration: none;
 	font-size: 3rem;
+}
+
+.pokemon-main__button-svg {
+	width: 50px;
+	height: 50px;
+	margin-right: 1%;
 }
